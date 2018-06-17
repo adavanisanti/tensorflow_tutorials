@@ -37,7 +37,7 @@ print(mnist.train.images.shape, mnist.train.labels.shape)
 print(np.min(mnist.train.images), np.max(mnist.train.images))
 
 # %% we can visualize any one of the images by reshaping it to a 28x28 image
-plt.imshow(np.reshape(mnist.train.images[100, :], (28, 28)), cmap='gray')
+#plt.imshow(np.reshape(mnist.train.images[100, :], (28, 28)), cmap='gray')
 
 # %% We can create a container for an input image using tensorflow's graph:
 # We allow the first dimension to be None, since this will eventually
@@ -78,7 +78,8 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
 # %% Now actually do some training:
-batch_size = 100
+#batch_size = 100
+batch_size = 1
 n_epochs = 10
 for epoch_i in range(n_epochs):
     for batch_i in range(mnist.train.num_examples // batch_size):

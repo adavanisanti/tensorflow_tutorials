@@ -86,7 +86,7 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
 # %% We'll train in minibatches and report accuracy:
-batch_size = 100
+batch_size = 10
 n_epochs = 5
 for epoch_i in range(n_epochs):
     for batch_i in range(mnist.train.num_examples // batch_size):
@@ -102,4 +102,4 @@ for epoch_i in range(n_epochs):
 
 # %% Let's take a look at the kernels we've learned
 W = sess.run(W_conv1)
-plt.imshow(montage(W / np.max(W)), cmap='coolwarm')
+#plt.imshow(montage(W / np.max(W)), cmap='coolwarm')
